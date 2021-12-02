@@ -1,15 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from "react"
+import ReactDOM from "react-dom"
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import MainContent from "./components/MainContent"
+import "./style.css"
 
-var h1e = document.createElement("h1");
-h1e.textContent = "Hello there!";
-h1e.classList.add("header");
-document.getElementById("root").appendChild(h1e);
+function App(){
+    return (
+        <div>
+            <Header />                     
+            <MainContent />          
+            <Footer/>
+        </div>
+    )
+}
 
 ReactDOM.render(
-    <div>
-        <MyNavbar />
-        <MainContent />
-    </div>, 
+    <App />, 
     document.getElementById("root")
+)
